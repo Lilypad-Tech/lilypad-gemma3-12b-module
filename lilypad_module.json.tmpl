@@ -1,5 +1,5 @@
 {
-  "machine": { "gpu": 1, "vram": 32000, "cpu": 8000, "ram": 24000 },
+  "machine": { "gpu": 1, "vram": 60000, "cpu": 8000, "ram": 60000 },
   "job": {
     "APIVersion": "V1beta1",
     "Spec": {
@@ -13,7 +13,7 @@
       "Engine": "Docker",
       "Network": { "Type": "None" },
       "Outputs": [{ "Name": "outputs", "Path": "/outputs" }],
-      "Resources": { "GPU": "1", "CPU": "8", "Memory": "24000MB" },
+      "Resources": { "GPU": "1", "CPU": "8", "Memory": "60000MB" },
       "Timeout": 3600,
       "Verifier": "Noop"
     }
