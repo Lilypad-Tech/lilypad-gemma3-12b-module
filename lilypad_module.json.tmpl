@@ -1,0 +1,21 @@
+{
+  "machine": { "gpu": 1, "vram": 60000, "cpu": 8000, "ram": 24000 },
+  "job": {
+    "APIVersion": "V1beta1",
+    "Spec": {
+      "Deal": { "Concurrency": 1 },
+      "Docker": {
+        "Entrypoint": [
+          "/app/src/run_model", {{ .request }}
+        ],
+        "Image": "narbs91/gemma3-12b:v0.0.0"
+      },
+      "Engine": "Docker",
+      "Network": { "Type": "None" },
+      "Outputs": [{ "Name": "outputs", "Path": "/outputs" }],
+      "Resources": { "GPU": "1", "CPU": "8", "Memory": "24000MB" },
+      "Timeout": 3600,
+      "Verifier": "Noop"
+    }
+  }
+}
